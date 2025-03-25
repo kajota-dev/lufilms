@@ -13,7 +13,7 @@ export function Navbar({ scrollToContact }: { scrollToContact: () => void }) {
         {/* Logo con letras (siempre visible) */}
         <div className="flex items-center space-x-8">
           <img
-            src="app/img/letraLuFilms.png"
+            src="img/letraLuFilms.png"
             alt="Logo con letras"
             className="max-w-[120px] max-h-[120px] md:max-w-[150px] md:max-h-[150px] object-contain"
           />
@@ -21,7 +21,7 @@ export function Navbar({ scrollToContact }: { scrollToContact: () => void }) {
 
         {/* Logo principal centrado solo en pantallas grandes */}
         <div className="hidden md:flex justify-center flex-grow absolute left-1/2 transform -translate-x-1/2">
-          <img src="app/img/logoLu.png" alt="Logo principal" className="h-10" />
+          <img src="img/logoLu.png" alt="Logo principal" className="h-10" />
         </div>
 
         {/* Icono de hamburguesa (visible solo en pantallas pequeñas) */}
