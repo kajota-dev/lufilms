@@ -4,7 +4,7 @@ export function HeroSection({ scrollToContact }: { scrollToContact: () => void }
   return (
     <section
       className="relative h-screen flex items-center justify-center text-white bg-cover bg-center px-6 md:px-12"
-      style={{ backgroundImage: "url('app/img/fondo.jpg')" }}
+      style={{ backgroundImage: "url('img/fondo.jpg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-85"></div>

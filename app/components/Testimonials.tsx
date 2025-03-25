@@ -12,7 +12,7 @@ import {
 const logos = [
   { src: "https://www.fitmanageapp.com/logo.ico", alt: "FitManage App" },
   { src: "https://res.cloudinary.com/djmhhp7hp/image/upload/v1708539310/favico_kpdami.png", alt: "Cloudinary" },
-  { src: "app/img/tenisturri.jpg", alt: "Tenis Turri" },
+  { src: "img/tenisturri.jpg", alt: "Tenis Turri" },
 ];
 
 export function Testimonials() {

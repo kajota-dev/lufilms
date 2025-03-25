@@ -4,25 +4,25 @@ const services = [
     "title": "Producción de Video",
     "description": "Aumenta tu impacto con contenido visual que vende. Captamos la esencia de tu negocio y creamos videos profesionales que convierten espectadores en clientes.",
     "icon": "🎬",
-    "img": "/app/img/video.jpg"
+    "img": "img/video.jpg"
   },
   {
     "title": "Edición y Postproducción",
     "description": "Transforma grabaciones en contenido irresistible. Pulimos cada detalle para que tu mensaje sea claro, atractivo y profesional.",
     "icon": "🎞️",
-    "img": "/app/img/editar.jpg"
+    "img": "img/editar.jpg"
   },
   {
     "title": "Fotografía Comercial",
     "description": "Convierte miradas en ventas. Capturamos imágenes de alto impacto que elevan la percepción de tu marca y generan confianza inmediata.",
     "icon": "📸",
-    "img": "/app/img/camara.jpg"
+    "img": "img/camara.jpg"
   },
   {
     "title": "Producción Aérea de Contenido con Dron",
     "description": "Haz que tu negocio se vea como nunca antes. Con tomas aéreas impresionantes, mostramos tu proyecto desde perspectivas que cautivan y generan mayor interés.",
     "icon": "🎥",
-    "img": "/app/img/drone.jpg"
+    "img": "img/drone.jpg"
   }
 ]
 

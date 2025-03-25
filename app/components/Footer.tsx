@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Logo centrado */}
         <div className="mb-4">
         <img 
-  src="app/img/logoLuFilms.png" // Aquí debes colocar la ruta de tu logo
+  src="img/logoLuFilms.png" // Aquí debes colocar la ruta de tu logo
   alt="Logo de la empresa"
   className="h-10 mx-auto" // mx-auto centra el logo en su contenedor
 />

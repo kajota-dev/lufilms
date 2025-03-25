@@ -53,7 +53,7 @@ export function Navbar({ scrollToContact }: { scrollToContact: () => void }) {
       >
         {/* Logo con letras (siempre visible) */}
         <img
-          src="app/img/logoLu.png"
+          src="img/logoLu.png"
           alt="Logo con letras"
           className="max-w-[60px] max-h-[120px] md:max-w-[50px] md:max-h-[50px] object-contain mb-4"
         />

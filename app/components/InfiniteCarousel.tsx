@@ -17,12 +17,12 @@ export function InfiniteCarousel() {
 
   // Lista de logos de marcas
   const logos = [
-    { src: "app/img/software/gopro.png", alt: "GoPro", name: "GoPro" },
-    { src: "app/img/software/dji.png", alt: "DJI", name: "DJI" },
-    { src: "app/img/software/nikon.png", alt: "Nikon", name: "Nikon" },
-    { src: "app/img/software/adobe.png", alt: "Adobe", name: "Adobe" },
-    { src: "app/img/software/davinci.png", alt: "DaVinci Resolve", name: "DaVinci Resolve" },
-    { src: "app/img/software/after.png", alt: "After Effects", name: "After Effects" },
+    { src: "img/software/gopro.png", alt: "GoPro", name: "GoPro" },
+    { src: "img/software/dji.png", alt: "DJI", name: "DJI" },
+    { src: "img/software/nikon.png", alt: "Nikon", name: "Nikon" },
+    { src: "img/software/adobe.png", alt: "Adobe", name: "Adobe" },
+    { src: "img/software/davinci.png", alt: "DaVinci Resolve", name: "DaVinci Resolve" },
+    { src: "img/software/after.png", alt: "After Effects", name: "After Effects" },
   ]
 
   return (
