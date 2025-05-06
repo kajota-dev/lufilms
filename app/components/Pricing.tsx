@@ -14,8 +14,9 @@ export function Pricing() {
   const toggleCurrency = (newCurrency: "USD" | "CRC") => setCurrency(newCurrency);
 
   const prices = {
-    USD: { professional: "$59/mes", professionalOriginal: "$99/mes", premium: "$99.5/mes", premiumOriginal: "$199/mes" },
-    CRC: { professional: "₡32,000/mes", professionalOriginal: "₡53,000/mes", premium: "₡53,500/mes", premiumOriginal: "₡107,000/mes" }
+    USD: { premium: "$139/mes", premiumOriginal: "$199/mes" },
+    CRC: { premium: "₡74.900/mes", premiumOriginal: "₡107,000/mes" }
+    
   } as const;
 
   return (
@@ -40,7 +41,7 @@ export function Pricing() {
 
       <div className="flex flex-wrap justify-center gap-8">
         {/* Plan Profesional */}
-        <Card className="w-full sm:w-[350px] md:w-[400px] bg-white shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
+        {/* <Card className="w-full sm:w-[350px] md:w-[400px] bg-white shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
           <div className="absolute top-0 left-0 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-br-lg">
             Descuento 40%
           </div>
@@ -62,14 +63,14 @@ export function Pricing() {
               ¡Comprar!
             </Button>
           </CardContent>
-        </Card>
+        </Card> */}
 
         {/* Plan Premium */}
         <Card className="w-full sm:w-[350px] md:w-[400px] bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
-          <div className="absolute top-0 left-0 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-br-lg">
-            Descuento 50%
+          <div className=" top-0 left-0 bg-red-500 text-white text-s font-semibold px-3 py-1 rounded-br-lg">
+            Descuento 30%
           </div>
-          <CardTitle className="text-2xl font-semibold text-center">Premium</CardTitle>
+          <CardTitle className="text-2xl font-semibold text-center">Emprendedor</CardTitle>
           <CardContent className="p-4">
             <p className="text-lg mb-4">Ideal para marcas que desean sobresalir y maximizar su impacto.</p>
             <div className="flex flex-col items-center mb-4">
@@ -77,15 +78,15 @@ export function Pricing() {
               <p className="text-3xl font-bold text-black">{prices[currency].premium}</p>
             </div>
             <ul className="list-disc text-left mb-6 mx-auto max-w-[80%]">
-              <li>4 videos y 15 imágenes profesionales</li>
-              <li>Videos 4K de alta calidad</li>
-              <li>Edición avanzada y creativa</li>
-              <li>2 revisiones gratuitas</li>
-              <li>Soporte prioritario</li>
-              <li>Tomas aéreas con dron (hasta 30 segundos)</li>
+              <li>2 piezas audiovisuales creadas a la medida para atraer, conectar y convertir</li>
+              <li>Producción profesional basada en los objetivos y estilo único de tu marca</li>
+              <li>Guion, grabación y edición estratégica: nos encargamos de todo</li>
+              <li>Contenido optimizado para captar la atención del consumidor digital actual</li>
+              <li>Hasta 2 revisiones para pulir cada detalle según tu visión</li>
+              <li>Filmación aérea con dron para potenciar el impacto visual y destacar en redes</li>
             </ul>
             <Button className="w-full bg-yellow-500 text-black hover:bg-yellow-400 hover:opacity-80 rounded-lg py-2" onClick={openModal}>
-              ¡Comprar!
+              Cotizar!
             </Button>
           </CardContent>
         </Card>

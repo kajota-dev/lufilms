@@ -1,30 +1,25 @@
 
 const services = [
   {
-    "title": "Producción de Video",
-    "description": "Aumenta tu impacto con contenido visual que vende. Captamos la esencia de tu negocio y creamos videos profesionales que convierten espectadores en clientes.",
-    "icon": "🎬",
-    "img": "img/video.jpg"
+    title: "Videos que Venden",
+    description: "Contenido audiovisual pensado para captar atención, generar confianza y convertir vistas en clientes. Ideal para mostrar su valor de forma clara, directa y emocional.",
+    icon: "🎬",
+    img: "img/video.jpg"
   },
   {
-    "title": "Edición y Postproducción",
-    "description": "Transforma grabaciones en contenido irresistible. Pulimos cada detalle para que tu mensaje sea claro, atractivo y profesional.",
-    "icon": "🎞️",
-    "img": "img/editar.jpg"
+    title: "Edición con Propósito",
+    description: "Transforme cualquier grabación en una pieza visual que conecta. Cada corte, efecto y música están pensados para contar su historia con impacto y profesionalismo.",
+    icon: "🎞️",
+    img: "img/editar.jpg"
   },
   {
-    "title": "Fotografía Comercial",
-    "description": "Convierte miradas en ventas. Capturamos imágenes de alto impacto que elevan la percepción de tu marca y generan confianza inmediata.",
-    "icon": "📸",
-    "img": "img/camara.jpg"
-  },
-  {
-    "title": "Producción Aérea de Contenido con Dron",
-    "description": "Haz que tu negocio se vea como nunca antes. Con tomas aéreas impresionantes, mostramos tu proyecto desde perspectivas que cautivan y generan mayor interés.",
-    "icon": "🎥",
-    "img": "img/drone.jpg"
+    title: "Perspectiva Aérea que Impacta",
+    description: "Tome ventaja con tomas desde el aire que elevan su imagen, resaltan su proyecto y generan una percepción de marca sólida y memorable.",
+    icon: "🎥",
+    img: "img/drone.jpg"
   }
 ]
+
 
 
 
@@ -33,17 +28,18 @@ export function Services() {
     <section className="py-16 px-6 lg:px-20 text-center">
       {/* Título y descripción introductoria */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold">Tu negocio merece ser visto.</h2>
+        <h2 className="text-3xl font-bold">¿Ha invertido horas creando videos que no conectan ni generan resultados?</h2>
         <p className="mt-4 text-lg">
-          Potencia tu marca y hazla destacar con contenido visual de calidad.
-        </p>
+  Nos encargamos de todo: guion, grabación, edición y estrategia visual.
+</p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-        {[
-    { title: "Guion Estratégico", color: "bg-black text-[#fffc04]" },
-    { title: "Identidad Visual", color: "bg-[#fffc04] text-black" },
-    { title: "Cuenta tu Historia", color: "bg-[#fffc04] text-black" },
-    { title: "Diferénciate del Resto", color: "bg-black text-[#fffc04]" },
+              {[
+        { title: "Ahorre Tiempo y Energía", color: "bg-black text-[#fffc04]" },         // En lugar de "Guion Estratégico"
+        { title: "Consolide su Identidad Visual", color: "bg-[#fffc04] text-black" },   // En lugar de "Identidad Visual"
+        { title: "Conecte Emocionalmente con su Audiencia", color: "bg-[#fffc04] text-black" }, // En lugar de "Cuenta tu Historia"
+        { title: "Destaque Frente a su Competencia", color: "bg-black text-[#fffc04]" } // En lugar de "Diferénciate del Resto"
+
         ].map((item, index) => (
           <div
             key={index}
