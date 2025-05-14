@@ -4,6 +4,7 @@ import { Button } from "../components/ui/button";
 import { ContactForm } from "./ContactForm";
 import { BiDollar } from "react-icons/bi";
 import { FaColonSign } from "react-icons/fa6";
+import CountdownTimer from "./CountdownTimer";
 
 export function Pricing() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,6 +24,11 @@ export function Pricing() {
     <section className="py-16 px-6 bg-black text-center">
       <h2 className="text-3xl text-white font-bold mb-4">Planes y Precio</h2>
 
+                <p className="text-gray-400">Solo quedan:</p>
+                <CountdownTimer />
+                <p className="text-[#fffc04] font-semibold text-base">
+                  Para obtener el 30% de descuento en el plan Emprendedor
+                </p> <br />
       {/* Selector de moneda */}
       <div className="flex justify-center gap-4 mb-6">
         <button 
@@ -40,40 +46,14 @@ export function Pricing() {
       </div>
 
       <div className="flex flex-wrap justify-center gap-8">
-        {/* Plan Profesional */}
-        {/* <Card className="w-full sm:w-[350px] md:w-[400px] bg-white shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
-          <div className="absolute top-0 left-0 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-br-lg">
-            Descuento 40%
-          </div>
-          <CardTitle className="text-2xl font-semibold text-center">Profesional</CardTitle>
-          <CardContent className="p-4">
-            <p className="text-lg mb-4">Perfecto para mejorar tu presencia en línea y atraer más clientes.</p>
-            <div className="flex flex-col items-center mb-4">
-              <p className="text-lg text-gray-500 line-through">{prices[currency].professionalOriginal}</p>
-              <p className="text-3xl font-bold text-black">{prices[currency].professional}</p>
-            </div>
-            <ul className="list-disc text-left mb-6 mx-auto max-w-[80%]">
-              <li>2 videos y 8 imágenes de impacto</li>
-              <li>Videos de alta calidad</li>
-              <li>Edición profesional</li>
-              <li>1 revisión gratuita</li>
-              <li>Toma aérea con dron (10 segundos)</li>
-            </ul>
-            <Button className="w-full bg-yellow-500 text-black hover:bg-yellow-400 hover:opacity-80 rounded-lg py-2" onClick={openModal}>
-              ¡Comprar!
-            </Button>
-          </CardContent>
-        </Card> */}
 
-        {/* Plan Premium */}
         <Card className="w-full sm:w-[350px] md:w-[400px] bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
-          <div className=" top-0 left-0 bg-red-500 text-white text-s font-semibold px-3 py-1 rounded-br-lg">
-            Descuento 30%
-          </div>
+
           <CardTitle className="text-2xl font-semibold text-center">Emprendedor</CardTitle>
           <CardContent className="p-4">
             <p className="text-lg mb-4">Ideal para marcas que desean sobresalir y maximizar su impacto.</p>
             <div className="flex flex-col items-center mb-4">
+              <p className="text-lg text-black">Desde:</p>
               <p className="text-lg text-gray-500 line-through">{prices[currency].premiumOriginal}</p>
               <p className="text-3xl font-bold text-black">{prices[currency].premium}</p>
             </div>
@@ -90,6 +70,44 @@ export function Pricing() {
             </Button>
           </CardContent>
         </Card>
+
+
+        {/* Card: Redes Sociales Estratégicas */}
+<Card className="w-full sm:w-[350px] md:w-[400px] bg-gradient-to-r from-blue-500 to-indigo-600 shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
+  <CardTitle className="text-2xl font-semibold text-center text-white">Estrategia en Redes</CardTitle>
+  <CardContent className="p-4 text-white">
+    <p className="text-lg mb-4">Ideal si quiere llevar su presencia digital al siguiente nivel.</p>
+    <ul className="list-disc text-left mb-6 mx-auto max-w-[80%] space-y-2">
+      <li>Campañas personalizadas alineadas a objetivos de venta</li>
+      <li>Diseño de estrategia por embudos: atracción, conversión y cierre</li>
+      <li>Contenido optimizado por etapa del cliente</li>
+      <li>Gestión mensual de su marca en redes sociales</li>
+      <li>Redireccionamiento estratégico a WhatsApp para facilitar ventas</li>
+    </ul>
+    <Button className="w-full bg-white text-indigo-700 hover:bg-gray-200 rounded-lg py-2" onClick={openModal}>
+      Deseo agregar al plan
+    </Button>
+  </CardContent>
+</Card>
+
+{/* Card: Sitio Web Profesional */}
+<Card className="w-full sm:w-[350px] md:w-[400px] bg-gradient-to-r from-gray-700 to-gray-900 shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
+  <CardTitle className="text-2xl font-semibold text-center text-white">Sitio Web Profesional</CardTitle>
+  <CardContent className="p-4 text-white">
+    <p className="text-lg mb-4">Para quienes desean presencia sólida y profesional en internet.</p>
+    <ul className="list-disc text-left mb-6 mx-auto max-w-[80%] space-y-2">
+      <li>Diseño moderno, responsive y enfocado en conversión</li>
+      <li>Incrementa la confianza y credibilidad de su marca</li>
+      <li>Canal adicional para atraer clientes sin depender solo de redes</li>
+      <li>Integración con WhatsApp, redes sociales y ubicación</li>
+      <li>Soporte básico y posibilidad de futuras actualizaciones</li>
+    </ul>
+    <Button className="w-full bg-white text-gray-900 hover:bg-gray-100 rounded-lg py-2" onClick={openModal}>
+      Deseo agregar al plan
+    </Button>
+  </CardContent>
+</Card>
+
       </div>
 
       {/* Modal de Compra */}
