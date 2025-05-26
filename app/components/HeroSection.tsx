@@ -43,7 +43,7 @@ export function HeroSection({
         {/* Botón */}
         <div className="mt-8">
           <Button
-            className="bg-[#fffc04] text-black hover:opacity-80 px-6 py-2 rounded-md text-lg font-semibold shadow-md transition"
+            className="bg-[#fffc04] text-black  px-6 py-2 rounded-md text-lg font-semibold shadow-md transition"
             onClick={scrollToContact}
           >
             Agendar mi promoción

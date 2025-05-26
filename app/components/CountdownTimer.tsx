@@ -18,7 +18,9 @@ export default function CountdownTimer() {
       date={endDate}
       renderer={({ days, hours, minutes, seconds, completed }) => {
         if (completed) {
-          return <span>La promoción ha terminado.</span>;
+          return <span>La promoción ha terminado, no quedan cupos disponibles, intente luego
+            
+          </span>;
         }
 
         return (
