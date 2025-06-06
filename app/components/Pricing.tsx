@@ -16,8 +16,23 @@ export function Pricing() {
     setCurrency(newCurrency);
 
   const prices = {
-    USD: { premium: "$139/mes", premiumOriginal: "$199/mes" },
-    CRC: { premium: "₡74.900/mes", premiumOriginal: "₡107,000/mes" },
+    USD: {
+      premiumOriginal: "$199/mes",
+      premium: "$169.15/mes", // 199 - 15% = 169.15
+    },
+    CRC: {
+      premiumOriginal: "₡107,000/mes",
+      premium: "₡90,950/mes", // 107000 - 15% = 90950
+    },
+  } as const;
+
+    const pricesSocialMedia = {
+    USD: {
+      premiumOriginal: "$99/mes",
+    },
+    CRC: {
+      premiumOriginal: "₡44,900/mes",
+    },
   } as const;
 
   return (
@@ -26,7 +41,7 @@ export function Pricing() {
       <p className="text-gray-400">Solo quedan:</p>
       <CountdownTimer />
       <p className="text-[#fffc04] font-semibold text-base">
-        Para obtener el 30% de descuento en el plan Emprendedor
+        Para obtener el 15% de descuento en el plan Emprendedor
       </p>{" "}
       <br />
       {/* Selector de moneda */}
@@ -53,67 +68,92 @@ export function Pricing() {
         </button>
       </div>
       <div className="flex flex-wrap justify-center gap-8">
-        <Card className="w-full sm:w-[350px] md:w-[400px] bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
-          <CardTitle className="text-2xl font-semibold text-center">
-            Contenido Visual para Emprendedores
+        <Card className="w-full sm:w-[360px] md:w-[420px] bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
+          <CardTitle className="text-2xl font-semibold text-center text-black px-4 pt-4">
+            Contenido Estratégico para Emprendedores
           </CardTitle>
           <CardContent className="p-4">
-            <p className="text-lg mb-4">
-              Ideal para marcas que desean sobresalir y maximizar su impacto.
+            <p className="text-base text-black mb-4 text-center">
+              No solo creamos contenido visual, construimos un mensaje que
+              conecta y convierte.
             </p>
+
+            <div className="bg-white rounded-lg p-4 shadow-inner mb-4">
+              <h3 className="text-lg font-bold text-black mb-2">
+                📉 Estrategia de Oferta Irresistible
+              </h3>
+              <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
+                <li>
+                  Definición de su <strong>propuesta de valor</strong> paso a paso
+                </li>
+                <li>
+                  Identificación de su <strong>mercado objetivo</strong>
+                </li>
+                <li>
+                  Claridad del <strong>resultado soñado</strong> de su cliente
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg p-4 shadow-inner mb-4">
+              <h3 className="text-lg font-bold text-black mb-2">
+                🎥 Producción de Video Estratégico
+              </h3>
+              <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
+                <li>2 piezas audiovisuales guionizadas y personalizados según su negocio</li>
+                <li>Sesiones de grabación (1-2 h c/u)</li>
+                <li>Edición profesional con textos, música y subtítulos</li>
+                <li>Formato vertical u horizontal para redes</li>
+                <li>Hasta 2 revisiones incluidas</li>
+                <li>Planeación de contenido mensual</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg p-4 shadow-inner mb-4">
+              <h3 className="text-lg font-bold text-black mb-2">
+                📸 Contenido Visual de Apoyo
+              </h3>
+              <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
+                <li>Captura de imágenes atractivas de su negocio y entorno (8)</li>
+                <li>
+                  Clips de apoyo que complementan los mensajes principales
+                </li>
+                <li>4 Carruseles visuales que educan y generan confianza</li>
+                <li>Estructura para destacar lo mejor de su marca</li>
+              </ul>
+            </div>
+
             <div className="flex flex-col items-center mb-4">
-              <p className="text-lg text-black">Desde:</p>
-              <p className="text-lg text-gray-500 line-through">
+              <p className="text-base text-black">Desde:</p>
+              <p className="text-base text-gray-700 line-through">
                 {prices[currency].premiumOriginal}
               </p>
               <p className="text-3xl font-bold text-black">
                 {prices[currency].premium}
               </p>
             </div>
-            <ul className="list-disc text-left mb-6 mx-auto max-w-[80%]">
-              <li>
-                2 piezas audiovisuales creadas a la medida para atraer, conectar
-                y convertir
-              </li>
-              <li>
-                Producción profesional basada en los objetivos y estilo único de
-                tu marca
-              </li>
-              <li>
-                Guion, grabación y edición estratégica: nos encargamos de todo
-              </li>
-              <li>
-                Contenido optimizado para captar la atención del consumidor
-                digital actual
-              </li>
-              <li>
-                Hasta 2 revisiones para pulir cada detalle según tu visión
-              </li>
-              <li>
-                Filmación aérea con dron para potenciar el impacto visual y
-                destacar en redes
-              </li>
-            </ul>
+
             <Button
-              className="w-full bg-yellow-500 text-black hover:bg-yellow-400 hover:opacity-80 rounded-lg py-2"
+              className="w-full bg-black text-yellow-400 hover:bg-gray-900 hover:opacity-90 rounded-lg py-2 text-lg font-semibold"
               onClick={openModal}
             >
               Iniciar hoy
             </Button>
           </CardContent>
         </Card>
-{/* 
+
+        
         
         <Card className="w-full sm:w-[350px] md:w-[400px] bg-gradient-to-r from-blue-500 to-indigo-600 shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
           <CardTitle className="text-2xl font-semibold text-center text-white">
-            Estrategia en Redes
+            Manejo de Redes
           </CardTitle>
           <CardContent className="p-4 text-white">
             <p className="text-lg mb-4">
               Ideal si quiere llevar su presencia digital al siguiente nivel.
             </p>
             <ul className="list-disc text-left mb-6 mx-auto max-w-[80%] space-y-2">
-              <li>Campañas personalizadas alineadas a objetivos de venta</li>
+              <li>Campañas publicitarias personalizadas alineadas a objetivos de venta</li>
               <li>
                 Diseño de estrategia por embudos: atracción, conversión y cierre
               </li>
@@ -123,6 +163,11 @@ export function Pricing() {
                 Redireccionamiento estratégico a WhatsApp para facilitar ventas
               </li>
             </ul>
+
+                          <p className="text-base text-black">Desde:</p>
+              <p className="text-3xl font-bold text-black">
+                {pricesSocialMedia[currency].premiumOriginal}
+              </p>
             <Button
               className="w-full bg-white text-indigo-700 hover:bg-gray-200 rounded-lg py-2"
               onClick={openModal}
@@ -131,10 +176,10 @@ export function Pricing() {
             </Button>
           </CardContent>
         </Card> 
-    */}
+   
 
         {/* Card: Sitio Web Profesional */}
-        <Card className="w-full sm:w-[350px] md:w-[400px] bg-gradient-to-r from-gray-700 to-gray-900 shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
+        {/* <Card className="w-full sm:w-[350px] md:w-[400px] bg-gradient-to-r from-gray-700 to-gray-900 shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
           <CardTitle className="text-2xl font-semibold text-center text-white">
             Sitio Web Profesional
           </CardTitle>
@@ -164,7 +209,7 @@ export function Pricing() {
               Deseo agregar al plan
             </Button>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
       {/* Modal de Compra */}
       {isModalOpen && (

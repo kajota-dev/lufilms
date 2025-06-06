@@ -22,8 +22,8 @@ export function Index() {
       <Navbar scrollToContact={scrollToContact} />
       <HeroSection scrollToContact={scrollToContact} />
       <Services />
-      <InfiniteCarousel />
-      <Testimonials />
+      {/* <InfiniteCarousel /> */}
+      {/* <Testimonials /> */}
       <Pricing />
       
       <div ref={contactRef}>

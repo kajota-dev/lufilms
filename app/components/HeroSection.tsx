@@ -24,19 +24,17 @@ export function HeroSection({
 
         {/* Subtítulo corto */}
         <p className="mt-4 text-lg text-gray-300 max-w-xl">
-          Entonces requiere de videos estratégicos que posicionan su marca y aumentan sus ventas.
-        </p>
+Entonces necesita diseñar y comunicar una oferta irresistible que posicione su valor frente a los clientes correctos.        </p>
 
         {/* Promoción */}
         <div className="mt-6 text-sm text-gray-200 text-center space-y-2">
           <p className="text-gray-400">Solo quedan:</p>
           <CountdownTimer />
           <p className="text-[#fffc04] font-semibold text-base">
-            Para obtener el 30% de descuento
+            Para obtener el 15% de descuento
           </p>
           <p>
-            En el <strong>Paquete Emprendedor</strong> +{" "}
-            <strong>8 fotografías profesionales GRATIS</strong>.
+            En el <strong>Paquete Emprendedor</strong> 
           </p>
         </div>
 
@@ -46,7 +44,7 @@ export function HeroSection({
             className="bg-[#fffc04] text-black  px-6 py-2 rounded-md text-lg font-semibold shadow-md transition"
             onClick={scrollToContact}
           >
-            Agendar mi promoción
+            Potenciar mi marca hoy
           </Button>
         </div>
       </div>

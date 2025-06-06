@@ -4,7 +4,7 @@ import { Index } from "../pages/index";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "LUFILMS" },
-    { name: "description", content: "Muestra tu negocio" },
+    { name: "description", content: "Aumenta ventas" },
     { rel: "icon", type: "image/png", href: "img/logoLu.png" },
   ];
 }
