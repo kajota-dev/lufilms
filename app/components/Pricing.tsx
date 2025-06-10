@@ -28,10 +28,10 @@ export function Pricing() {
 
     const pricesSocialMedia = {
     USD: {
-      premiumOriginal: "$99/mes",
+      premiumOriginal: "$199/mes",
     },
     CRC: {
-      premiumOriginal: "₡44,900/mes",
+      premiumOriginal: "₡98.300/mes",
     },
   } as const;
 
@@ -66,7 +66,9 @@ export function Pricing() {
         >
           <FaColonSign />
         </button>
+        
       </div>
+      <p className="text-white">Precio no incluye gastos de transporte ni inversión para pautas publicitarias</p>
       <div className="flex flex-wrap justify-center gap-8">
         <Card className="w-full sm:w-[360px] md:w-[420px] bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-xl rounded-lg overflow-hidden transform transition-all hover:scale-105">
           <CardTitle className="text-2xl font-semibold text-center text-black px-4 pt-4">
@@ -118,7 +120,7 @@ export function Pricing() {
                 <li>
                   Clips de apoyo que complementan los mensajes principales
                 </li>
-                <li>4 Carruseles visuales que educan y generan confianza</li>
+                <li>2 Carruseles visuales que educan y generan confianza</li>
                 <li>Estructura para destacar lo mejor de su marca</li>
               </ul>
             </div>
