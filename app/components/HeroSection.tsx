@@ -27,7 +27,7 @@ export function HeroSection({
 Entonces necesita diseñar y comunicar una oferta irresistible que posicione su valor frente a los clientes correctos.        </p>
 
         {/* Promoción */}
-        <div className="mt-6 text-sm text-gray-200 text-center space-y-2">
+        {/* <div className="mt-6 text-sm text-gray-200 text-center space-y-2">
           <p className="text-gray-400">Solo quedan:</p>
           <CountdownTimer />
           <p className="text-[#fffc04] font-semibold text-base">
@@ -35,8 +35,8 @@ Entonces necesita diseñar y comunicar una oferta irresistible que posicione su 
           </p>
           <p>
             En el <strong>Paquete Emprendedor</strong> 
-          </p>
-        </div>
+          </p> 
+        </div> */}
 
         {/* Botón */}
         <div className="mt-8">
@@ -44,7 +44,7 @@ Entonces necesita diseñar y comunicar una oferta irresistible que posicione su 
             className="bg-[#fffc04] text-black  px-6 py-2 rounded-md text-lg font-semibold shadow-md transition"
             onClick={scrollToContact}
           >
-            Potenciar mi marca hoy
+            Quiero empezar
           </Button>
         </div>
       </div>
