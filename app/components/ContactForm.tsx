@@ -5,58 +5,61 @@ export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [packages, setPackages] = useState<string[]>([]);
+
+  // Nuevos campos alineados a tus paquetes y segmentos
+  const [selectedPackages, setSelectedPackages] = useState<string[]>([]);
+  const [tipoProyecto, setTipoProyecto] = useState("");
   const [tipoNegocio, setTipoNegocio] = useState("");
   const [enfoqueNegocio, setEnfoqueNegocio] = useState("");
   const [empleados, setEmpleados] = useState("");
   const [ambito, setAmbito] = useState("");
 
   const togglePackage = (pkg: string) => {
-    setPackages((prev) =>
-      prev.includes(pkg) ? prev.filter((item) => item !== pkg) : [...prev, pkg]
+    setSelectedPackages((prev) =>
+      prev.includes(pkg) ? prev.filter((p) => p !== pkg) : [...prev, pkg]
     );
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const selected = packages.length
-      ? packages.map((p) => `• ${p}`).join("\n")
+    const packagesText = selectedPackages.length
+      ? selectedPackages.map((p) => `• ${p}`).join("\n")
       : "• Sin seleccionar";
 
-    const message = `Hola, deseo más información sobre los siguientes paquetes:
+    const message = `Hola, deseo más información sobre los siguientes servicios:
 
-${selected}
+${packagesText}
 
 🧑 Nombre: ${name}
 📧 Correo: ${email}
 📞 Teléfono: ${phone}
 
-📌 Tipo de negocio: ${tipoNegocio}
-🎯 Enfoque del negocio: ${enfoqueNegocio}
-👥 Número de empleados: ${empleados}
-🌍 Ámbito geográfico: ${ambito}
+🧩 Tipo de proyecto: ${tipoProyecto || "No indicado"}
+📌 Tipo de negocio: ${tipoNegocio || "No indicado"}
+🎯 Enfoque del negocio: ${enfoqueNegocio || "No indicado"}
+👥 Número de empleados: ${empleados || "No indicado"}
+🌍 Ámbito geográfico: ${ambito || "No indicado"}
 
 Quedo atento(a), gracias.`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappNumber = "50685112743"; // Reemplazar con número real
+    const whatsappNumber = "50685112743"; // Reemplace con su número real
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
     window.open(whatsappURL, "_blank");
   };
 
   return (
     <div className="p-6 sm:p-8 bg-white rounded-lg shadow-lg">
       <form onSubmit={handleSubmit} className="space-y-4 text-gray-800">
-        <h2 className="text-center text-3xl sm:text-4xl font-extrabold text-gray-900 leading-snug mb-6">
-          ¿Listo para mostrar{" "}
-          <span className="text-red-600">todo el valor que ofreces</span>?{" "}
+        <h2 className="text-center text-2xl sm:text-3xl font-extrabold text-gray-900 leading-snug mb-6">
+          ¿Listo para impulsar sus ventas?
           <br />
-          Completa este formulario y sigamos hablando por{" "}
+          Complete este formulario y continuamos por{" "}
           <span className="text-green-600">WhatsApp</span>.
         </h2>
-        {/* Inputs */}
+
+        {/* Inputs básicos */}
         <input
           type="text"
           placeholder="Nombre completo"
@@ -82,41 +85,48 @@ Quedo atento(a), gracias.`;
           className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
-        {/* Paquetes */}
+        {/* Tipo de proyecto (segmento) */}
+        <select
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={tipoProyecto}
+          onChange={(e) => setTipoProyecto(e.target.value)}
+          required
+        >
+          <option value="" disabled>
+            Tipo de proyecto
+          </option>
+          <option value="Marcas & Negocios">Marcas & Negocios</option>
+          <option value="Bienes Raíces">Bienes Raíces</option>
+          <option value="Vehículos">Vehículos</option>
+        </select>
+
+        {/* Paquetes (adaptados a tu oferta actual) */}
         <div>
-          <p className="font-semibold mb-2">Seleccione los paquetes:</p>
+          <p className="font-semibold mb-2">Seleccione los servicios:</p>
           <div className="space-y-2">
             <label className="flex items-center gap-2">
               <input
                 type="checkbox"
-                checked={packages.includes("Paquete Emprendedor")}
-                onChange={() => togglePackage("Paquete Emprendedor")}
+                checked={selectedPackages.includes("Plan Emprendedor")}
+                onChange={() => togglePackage("Plan Emprendedor")}
                 className="form-checkbox h-4 w-4 text-blue-600"
               />
-              Paquete Emprendedor
+              Plan Emprendedor (contenido estratégico que convierte)
             </label>
+
             <label className="flex items-center gap-2">
               <input
                 type="checkbox"
-                checked={packages.includes("Estrategia en Redes")}
-                onChange={() => togglePackage("Estrategia en Redes")}
+                checked={selectedPackages.includes("Plan Ventas Rápidas")}
+                onChange={() => togglePackage("Plan Ventas Rápidas")}
                 className="form-checkbox h-4 w-4 text-blue-600"
               />
-              Estrategia en Redes
-            </label>
-            <label className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                checked={packages.includes("Sitio Web Profesional")}
-                onChange={() => togglePackage("Sitio Web Profesional")}
-                className="form-checkbox h-4 w-4 text-blue-600"
-              />
-              Sitio Web Profesional
+              Plan Ventas Rápidas (bienes raíces / vehículos)
             </label>
           </div>
         </div>
 
-        {/* Selects */}
+        {/* Selects del negocio */}
         <select
           className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           value={tipoNegocio}
