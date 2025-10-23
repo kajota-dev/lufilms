@@ -1,164 +1,99 @@
-const services = [
-  {
-    title: "Oferta de Valor",
-    description:
-      "Antes de grabar, trabajamos juntos en definir una oferta irresistible enfocada en resultados. Esto asegura que todo el contenido tenga una base clara, persuasiva y enfocada en conversión.",
-    icon: "🎯",
-    img: "img/bombillo.png",
-  },
-  {
-    title: "Planeación de Contenido Mensual",
-    description:
-      "Organizamos su calendario de contenido con ideas de alto impacto y guiones estratégicos. Incluye recomendaciones para videos, carruseles e imágenes informativas pensadas para atraer y educar a su audiencia.",
-    icon: "📋",
-    img: "img/planeacion.png",
-  },
-  {
-    title: "Edición Profesional con Enfoque Comercial",
-    description:
-      "Transformamos sus grabaciones en piezas de alto impacto. Con edición moderna, subtítulos, música y ritmo dinámico, logramos que su contenido comunique valor, aumente visualizaciones y genere más interacción.",
-    icon: "🎞️",
-    img: "img/editar.png",
-  },
-  {
-    title: "Regalia",
-    description:
-      "Recibirá materiales extra como fotos, clips B-roll y una guía para optimizar su perfil en redes sociales. Todo pensado para fortalecer su presencia y posicionar su marca con una imagen sólida y atractiva.",
-    icon: "🎁",
-    img: "img/regalo.png",
-  },
-];
-
 export function Services() {
+  const segments = [
+    {
+      title: "Marcas & Negocios",
+      emoji: "🏪",
+      img: "img/negocio.png",
+      description:
+        "¿Publica constantemente y nadie pregunta? Le ayudamos a crear contenido estratégico que convierta vistas en clientes reales y ventas constantes.",
+      categories: ["Restaurantes", "Gimnasios", "Tiendas", "Servicios"],
+      benefits: [
+        "Creamos contenido con estrategia y propósito, no al azar.",
+        "Desarrollamos anuncios optimizados para atraer al cliente correcto.",
+        "Implementamos embudos de venta que convierten seguidores en compradores.",
+        "Fortalezca su marca y genere confianza con una imagen profesional.",
+      ],
+    },
+    {
+      title: "Bienes Raíces (fincas, casas, lotes)",
+      emoji: "🏠",
+      img: "img/bienes.png",
+      description:
+        "Si su propiedad lleva semanas publicada sin resultados, producimos videos y campañas publicitarias que atraen compradores listos para visitar y cerrar.",
+      categories: ["Casas", "Apartamentos", "Lotes", "Fincas"],
+      benefits: [
+        "Diseñamos contenido visual que resalta el valor real de su propiedad.",
+        "Utilizamos estrategias publicitarias para llegar a compradores calificados.",
+        "Creamos embudos de venta que filtran curiosos y priorizan interesados reales.",
+        "Acelere la venta de su propiedad sin estrés ni negociaciones innecesarias.",
+      ],
+    },
+    {
+      title: "Vehículos (autos, motos premium)",
+      emoji: "🚗",
+      img: "img/vehiculos.png",
+      description:
+        "Fotos oscuras y publicaciones sin estrategia limitan sus ventas. Nosotros creamos contenido profesional y campañas que generan consultas de compradores reales.",
+      categories: ["Carros", "Motos", "Pickups", "4x4"],
+      benefits: [
+        "Creamos videos y fotografías que destacan lo mejor de su vehículo.",
+        "Aplicamos campañas publicitarias para llegar a personas interesadas en su zona.",
+        "Diseñamos embudos de venta que convierten clics en consultas reales.",
+        "Logre vender más rápido y con una imagen de confianza y profesionalismo.",
+      ],
+    },
+  ];
+
   return (
-    <section className="py-16 px-6 lg:px-20 text-center">
-      {/* Título y descripción introductoria */}
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold">
-          ¿Ha invertido horas creando videos que no conectan ni generan
-          resultados?
-        </h2>
-        <p className="mt-4 text-lg max-w-3xl mx-auto">
-          Nosotros definimos su oferta irresistible, diseñamos contenido
-          alineado con los intereses de su cliente ideal y lo transformamos en
-          una herramienta visual que vende por usted, incluso cuando usted no
-          está.
-        </p>
-
-        {/* Pregunta + respuesta: ¿Qué es una oferta irresistible? */}
-        <div className="mt-10 max-w-3xl mx-auto px-4 md:px-0">
-          <div className="bg-black text-white rounded-2xl shadow-lg p-6 md:p-8">
-            <h4 className="text-2xl font-bold mb-3">
-              ¿Qué es una{" "}
-              <span className="text-[#fffc04]">oferta irresistible</span>?
-            </h4>
-            <p className="text-lg leading-relaxed text-gray-200">
-              Es una propuesta que suena como un{" "}
-              <span className="text-[#fffc04] font-semibold">“SÍ LÓGICO”</span>.
-              Tan clara, relevante y enfocada en{" "}
-              <span className="text-[#fffc04] font-semibold">resultados</span>,
-              que el cliente siente que pierde si no la acepta.
-            </p>
-            <p className="text-lg leading-relaxed text-gray-200 mt-3">
-              No se trata solo de{" "}
-              <span className="text-[#fffc04] font-semibold">
-                bajar el precio
-              </span>
-              , sino de{" "}
-              <span className="text-[#fffc04] font-semibold">
-                aumentar el valor percibido
-              </span>
-              ,{" "}
-              <span className="text-[#fffc04] font-semibold">
-                resolver objeciones antes de que aparezcan
-              </span>{" "}
-              y destacar beneficios que conecten con sus{" "}
-              <span className="text-[#fffc04] font-semibold">
-                dolores y deseos reales
-              </span>
-              . Así, el precio deja de ser el problema.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-        {[
-          {
-            title: "Ahorre Tiempo y Energía",
-            color: "bg-black text-[#fffc04]",
-          },
-          {
-            title: "Consolide su Identidad Visual",
-            color: "bg-[#fffc04] text-black",
-          },
-          {
-            title: "Conecte Emocionalmente con su Audiencia",
-            color: "bg-[#fffc04] text-black",
-          },
-          {
-            title: "Destaque Frente a su Competencia",
-            color: "bg-black text-[#fffc04]",
-          },
-        ].map((item, index) => (
-          <div
-            key={index}
-            className={`p-6 rounded-2xl shadow-md ${item.color} flex items-center justify-center text-lg font-semibold`}
-          >
-            {item.title}
-          </div>
-        ))}
-      </div>
-
-      <h2 className="text-3xl font-bold">
-        ¿Está listo para llevar su marca al siguiente nivel?
-      </h2>
-      <p className="text-lg leading-relaxed mt-3 text-gray-700">
-        Esto es todo lo que recibirá para lograrlo.
+    <section className="py-16 px-6 lg:px-20 text-center bg-white">
+      <h1 className="text-4xl font-bold mb-6 text-gray-900">Contenido que vende, no que entretiene.</h1>
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+        Creamos videos, fotos y anuncios para que su negocio, propiedad o vehículo destaque y atraiga compradores reales. Sin complicaciones, sin perder tiempo.
       </p>
 
-      {/* Sección de servicios */}
-      <div className="mt-12 space-y-20">
-        {services.map((service, index) => (
+      <div className="grid gap-10 md:grid-cols-3">
+        {segments.map((seg, i) => (
           <div
-            key={index}
-            className={`flex flex-col-reverse md:flex-row items-center gap-12 ${
-              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            }`}
+            key={i}
+            className="rounded-3xl border border-gray-200 bg-white overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2 flex flex-col"
           >
-            {/* Contenedor de imagen */}
-            <div className="">
-              <img
-                src={service.img}
-                alt={service.title}
-                className="w-full max-h-100 object-contain rounded-xl"
-              />
+            <div className="relative w-full h-56 overflow-hidden">
+              <img src={seg.img} alt={seg.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              <h2 className="absolute bottom-4 left-4 text-white text-2xl font-bold drop-shadow-md">
+                {seg.title}
+              </h2>
             </div>
 
-            {/* Contenedor de título y descripción */}
-            <div className="w-full md:w-1/2 text-left">
-              <h3 className="text-3xl font-semibold flex items-center gap-2">
-                {service.icon} {service.title}
-              </h3>
-              <p className="mt-4 text-lg">{service.description}</p>
-              {/* <Button className="mt-6">Ver más</Button> */}
+            <div className="p-6 text-left flex flex-col flex-grow">
+              <p className="text-gray-700 mb-4 leading-relaxed">{seg.description}</p>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {seg.categories.map((c) => (
+                  <span key={c} className="text-xs bg-gray-100 text-gray-800 px-3 py-1 rounded-full border border-gray-200">
+                    {c}
+                  </span>
+                ))}
+              </div>
+
+              <ul className="list-disc pl-5 space-y-1 text-gray-800 flex-grow">
+                {seg.benefits.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+
+              <div className="mt-6 flex items-center justify-between">
+                <a href="#contacto" className="px-5 py-2.5 rounded-xl bg-black text-white text-sm font-semibold hover:bg-gray-800 transition">
+                  Quiero resultados
+                </a>
+                {/* <a href="#portafolio" className="text-sm underline text-gray-600 hover:text-black">
+                  Ver ejemplos
+                </a> */}
+              </div>
             </div>
           </div>
         ))}
-          <div className="bg-black p-6 rounded-lg">
-  <h2 className="text-2xl font-bold leading-snug text-white">
-    ¿El siguiente paso? <br /><br />
-    <span>
-      Reunirnos para{" "}
-      <span className="text-yellow-400 font-semibold">alinear su propuesta</span> y empezar a{" "}
-      <span className="text-yellow-400 font-semibold">atraer clientes</span> que realmente{" "}
-      <span className="text-yellow-400 font-semibold">valoran</span> lo que usted ofrece.
-    </span>
-  </h2>
-</div>
-
-
-            </div>
+      </div>
     </section>
   );
 }
