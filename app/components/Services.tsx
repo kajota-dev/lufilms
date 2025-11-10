@@ -86,7 +86,7 @@ export function Services() {
   return (
     <section className="py-16 px-6 lg:px-20 text-center bg-white">
       <h1 className="text-4xl font-bold mb-6 text-gray-900">
-        Contenido que genera ventas reales.
+        Venda más pero con estrategía
       </h1>
       <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
         Transformamos la imagen de su negocio en resultados: más clientes, más confianza y más ventas.
