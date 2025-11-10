@@ -7,6 +7,15 @@ import { Pricing } from "~/components/Pricing";
 import { ContactForm } from "../components/ContactForm";
 import { Navbar } from "../components/Navbar";
 import Footer from "~/components/Footer";
+import ClientLogosMarquee from "~/components/ClientLogosMarquee";
+
+const LOGOS = [
+  { img: "public/img/logos/Finca.png", title: "finca" },
+  { img: "public/img/logos/fma.png", title: "fma" },
+  { img: "public/img/logos/isDental.png", title: "isDental" },
+  { img: "public/img/logos/serenia.png", title: "Serenia" },
+];
+
 
 export function Index() {
   // Creamos la referencia
@@ -21,6 +30,12 @@ export function Index() {
     <>
       <Navbar scrollToContact={scrollToContact} />
       <HeroSection scrollToContact={scrollToContact} />
+
+     <ClientLogosMarquee
+          logos={LOGOS}
+          speedMs={20000}
+        />
+
       <Services />
       {/* <InfiniteCarousel /> */}
       {/* <Testimonials /> */}
