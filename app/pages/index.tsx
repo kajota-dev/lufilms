@@ -10,10 +10,10 @@ import Footer from "~/components/Footer";
 import ClientLogosMarquee from "~/components/ClientLogosMarquee";
 
 const LOGOS = [
-  { img: "public/img/logos/Finca.png", title: "finca" },
-  { img: "public/img/logos/fma.png", title: "fma" },
-  { img: "public/img/logos/isDental.png", title: "isDental" },
-  { img: "public/img/logos/serenia.png", title: "Serenia" },
+  { img: "/img/logos/Finca.png", title: "finca" },
+  { img: "/img/logos/fma.png", title: "fma" },
+  { img: "/img/logos/isDental.png", title: "isDental" },
+  { img: "/img/logos/serenia.png", title: "Serenia" },
 ];
 
 
