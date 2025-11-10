@@ -14,12 +14,12 @@ export function Pricing() {
 
   const prices = {
     USD: {
-      emprendedor: "$199/mes",
+      emprendedor: "$399/mes",
       ventasRapidas: "$229/mes",
       redes: "$199/mes",
     },
     CRC: {
-      emprendedor: "₡107,000/mes",
+      emprendedor: "₡200,000/mes",
       ventasRapidas: "₡122,000/mes",
       redes: "₡98,300/mes",
     },
